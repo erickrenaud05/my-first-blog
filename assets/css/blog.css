@@ -23,8 +23,6 @@ header button {
 
 footer {
     padding: 10px;
-    position: absolute;
-    bottom: 0px;
     border-top: var(--doubleBorder); 
     width: 100%;
 }
