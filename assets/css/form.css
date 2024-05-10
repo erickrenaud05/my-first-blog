@@ -1,10 +1,4 @@
-* {
-    margin: 0px;
-    padding: 0px;
-}
-
 header {
-    border-bottom: 10px double black; 
     color: orange;
     text-align: end;
 }
@@ -21,7 +15,7 @@ aside {
     justify-content: center;
     align-content: center;
     height: 100vh;
-    border-right: 10px double black; 
+    border-right: var(--doubleBorder); 
     width: 100%;
 }
 
@@ -81,7 +75,7 @@ form {
 
     aside {
         border-right: none;
-        border-bottom: 10px double black; 
+        border-bottom: var(--doubleBorder);
     }
 
     form {
