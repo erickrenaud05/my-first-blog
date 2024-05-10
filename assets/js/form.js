@@ -3,7 +3,7 @@ const titleInputEl = document.getElementById('formTitle');
 const contentInputEl = document.getElementById('formContent');
 const submitButtonEl = document.getElementById('formButton');
 
-const postsArray = [{}];
+const postsArray = retrieveBlogArray();
 
 submitButtonEl.addEventListener('click', function(event){
     event.preventDefault();
@@ -21,6 +21,15 @@ submitButtonEl.addEventListener('click', function(event){
 
     window.location.href = 'blog.html';
 });
+
+function retrieveBlogArray() {
+    const postsArray = JSON.parse(localStorage.getItem('posts'));
+    if(!postsArray) {
+        postsArray = [{}];
+    }
+
+    return postsArray;
+}
 
 function saveBlogPost() {
     const username = usernameInputEl.value;
