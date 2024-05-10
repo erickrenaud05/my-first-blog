@@ -22,15 +22,6 @@ submitButtonEl.addEventListener('click', function(event){
     window.location.href = 'blog.html';
 });
 
-function retrieveBlogArray() {
-    const postsArray = JSON.parse(localStorage.getItem('posts'));
-    if(!postsArray) {
-        postsArray = [{}];
-    }
-
-    return postsArray;
-}
-
 function saveBlogPost() {
     const username = usernameInputEl.value;
     const title = titleInputEl.value;
