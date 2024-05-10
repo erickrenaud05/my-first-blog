@@ -1,0 +1,12 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+:root {
+    --doubleBorder: 10px double black;
+}
+
+header {
+    border-bottom: var(--doubleBorder); 
+}
