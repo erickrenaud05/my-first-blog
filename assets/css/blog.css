@@ -32,3 +32,24 @@ footer {
 footer h3 {
     text-align: center;
 }
+
+.blogCard{
+    margin: 10px;
+    border: solid;
+    padding: 5px;
+}
+
+.blogTitle {
+    border-bottom: solid;
+}
+
+.blogAuthor {
+    opacity: 50%;
+}
+
+.blogContent {
+    height: 10vh;
+    margin-left: 20px;
+    margin-top: 10px;
+    overflow-y: auto;
+}
