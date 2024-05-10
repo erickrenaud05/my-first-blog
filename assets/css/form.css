@@ -1,0 +1,101 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+header {
+    border-bottom: 10px double black; 
+    color: orange;
+    text-align: end;
+}
+
+main {
+    display: flex;
+    height: 100vh;
+    margin: 0px 10px 10px 10px;
+    flex-direction: row;
+}
+
+aside {
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
+    border-right: 10px double black; 
+    width: 100%;
+}
+
+aside h1{
+    align-content: center;
+    margin: 50px;
+    height: 50%;
+    background: linear-gradient(
+        to bottom,
+        #EECA9A 10%,
+        #F2BD7B 10% 20%,
+        #E6A64F 20% 30%,
+        #C6863E 30% 40%, 
+        #B46F22 40% 50%,
+        #BA7415 50% 60%,
+        #905A1A 60% 70%,
+        #7A4D14 70% 80%,
+        #5A390E 80% 90%,
+        #3E260A 90% 100%
+      );
+      border: 2px solid black; 
+      border-radius: 50%;
+}
+
+form {
+ width: 100%;
+ align-content: center;
+ justify-items: center;
+ 
+}
+
+.formChild {
+    display: block;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.formInput {
+    width: 80%;
+}
+
+#formContent {
+    height: 20%;
+}
+
+.formButton {
+    margin-top: 20px;
+    width: 80%;
+    color: white;
+    background-color: black;
+}
+
+@media screen and (max-width: 797px){
+    main {
+        flex-wrap: wrap;
+    }
+
+    aside {
+        border-right: none;
+        border-bottom: 10px double black; 
+    }
+
+    form {
+        padding-top: 10px;
+        margin-top: 10px;
+        height: 50%;
+    }
+
+    .formChild {
+        text-align: center;
+        margin: 10px auto 10px auto;
+    }
+
+    #formContent {
+        height: 45%;
+    }
+}

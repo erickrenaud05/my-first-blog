@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>my first blog</title>
-    <!-- <link rel="stylesheet" href="assets/css/form.css"> -->
+    <link rel="stylesheet" href="assets/css/form.css">
 </head>
 <body>
     <header>
@@ -15,13 +15,13 @@
             <h1>My First Blog</h1>
         </aside>
         <form action="">
-            <label for="">Username: </label>
-            <input type="text">
-            <label for="">Title: </label>
-            <input type="text">
-            <label for="">Content: </label>
-            <input type="text">
-            <input type="button" value="submit">
+            <label for="username" class="formChild ">Username </label>
+            <input type="text" class="formChild formInput" id="username">
+            <label for="formTitle" class="formChild ">Title </label>
+            <input type="text" class="formChild formInput" id="formTitle">
+            <label for="formContent" class="formChild ">Content </label>
+            <textarea class="formChild formInput" id="formContent"></textarea>
+            <input type="submit" value="submit" class="formChild formButton">
         </form>
     </main>
 </body>
