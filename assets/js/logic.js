@@ -6,3 +6,4 @@ function retrieveBlogArray() {
     }
     return postsArray;
 }
+
