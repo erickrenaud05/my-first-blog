@@ -31,3 +31,31 @@ function createBlogPosts(post) {
 }
 
 displayBlog();
+
+const buttonEl = document.getElementById('button');
+const bodyEl = document.body;
+const darkModeButton = document.getElementById('dark-light');
+
+var root = document.querySelector(':root');
+
+buttonEl.addEventListener('click', function(event) {
+    let target = event.target;
+    console.log(bodyEl.state);
+    if(target.id === 'dark-light') {
+        if(bodyEl.getAttribute('state') === 'light') {
+            root.style.setProperty('--background', 'rgba(8, 8, 8, 0.729)');
+            root.style.setProperty('--textColor', 'white');
+            bodyEl.setAttribute('state', 'dark');
+            darkModeButton.innerText = '🌚';
+        } else if(bodyEl.getAttribute('state') === 'dark') {
+            root.style.setProperty('--background', 'white');
+            root.style.setProperty('--textColor', 'black');
+            bodyEl.setAttribute('state', 'light');
+            darkModeButton.innerText = '☀️';
+        }
+       
+    } else if(target.id === 'back') {
+        window.location.href = 'index.html';
+    }
+})
+
