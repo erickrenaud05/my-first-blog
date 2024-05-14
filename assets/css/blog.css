@@ -47,6 +47,8 @@ footer h3 {
 }
 
 .blogAuthor {
+    display: flex;
+    justify-content: space-between;
     opacity: 50%;
 }
 
@@ -55,4 +57,10 @@ footer h3 {
     margin-left: 20px;
     margin-top: 10px;
     overflow-y: auto;
+}
+
+/* delete button css */
+#delButton {
+   all: unset;
+   font-weight: 100;
 }
