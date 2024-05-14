@@ -41,18 +41,23 @@ function createBlogPosts(post) {
 
     blogCard.addEventListener('click', function(event) {
         if (event.target.id === 'delButton') {
-            const delBlogTitle = this.firstChild.innerText;
-            let x = 0;
-            for (let post of postsArray) {
-                if(post.title === delBlogTitle) {
-                    postsArray.splice(x, 1);
-                    localStorage.setItem('posts', JSON.stringify(postsArray));
-                    blogArea.innerHTML = '';
-                    displayBlog();
+            let confirmation = confirm('are you sure you want to delete this post?');
+            if(confirmation){
+                const delBlogTitle = this.firstChild.innerText;
+                let x = 0;
+                for (let post of postsArray) {
+                    if(post.title === delBlogTitle) {
+                        postsArray.splice(x, 1);
+                        localStorage.setItem('posts', JSON.stringify(postsArray));
+                        blogArea.innerHTML = '';
+                        displayBlog();
+                    }
+                    x++;
                 }
-                x++;
+                return 0;
             }
-        }
+            return 1;
+        }     
     });
     
     blogArea.appendChild(blogCard);
