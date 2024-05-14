@@ -1,5 +1,7 @@
 const blogArea = document.getElementById('blogPostArea');
 
+
+
 const postsArray = retrieveBlogArray();
 
 function displayBlog() {
@@ -8,25 +10,51 @@ function displayBlog() {
     }
 }
 
+
 function createBlogPosts(post) {
     const blogCard = document.createElement("div");
     const author = document.createElement("h3");
     const title = document.createElement("h2");
     const content = document.createElement("p");
+    //delete button 
+    const delButton = document.createElement("button");
 
     author.innerText = post.author;
     title.innerText = post.title;
     content.innerText = post.content;
+     //delete button 
+     delButton.innerText = 'Delete';
     
     blogCard.classList.add('blogCard');
     author.classList.add('blogAuthor');
     title.classList.add('blogTitle');
     content.classList.add('blogContent');
+    //delete button
+    delButton.setAttribute('type', 'button');
+    delButton.setAttribute('id', 'delButton');
 
     blogCard.appendChild(title);
     blogCard.appendChild(content);
     blogCard.appendChild(author);
+     //delete button 
+    author.appendChild(delButton);
 
+    blogCard.addEventListener('click', function(event) {
+        if (event.target.id === 'delButton') {
+            const delBlogTitle = this.firstChild.innerText;
+            let x = 0;
+            for (let post of postsArray) {
+                if(post.title === delBlogTitle) {
+                    postsArray.splice(x, 1);
+                    localStorage.setItem('posts', JSON.stringify(postsArray));
+                    blogArea.innerHTML = '';
+                    displayBlog();
+                }
+                x++;
+            }
+        }
+    });
+    
     blogArea.appendChild(blogCard);
 }
 
@@ -37,6 +65,7 @@ const bodyEl = document.body;
 const darkModeButton = document.getElementById('dark-light');
 
 var root = document.querySelector(':root');
+
 
 buttonEl.addEventListener('click', function(event) {
     let target = event.target;
@@ -56,6 +85,6 @@ buttonEl.addEventListener('click', function(event) {
        
     } else if(target.id === 'back') {
         window.location.href = 'index.html';
-    }
+    } 
 })
 
