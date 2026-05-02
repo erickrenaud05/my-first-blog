@@ -1,7 +1,7 @@
 #My-first-blog
 
 ##Description
-This website initially asks you to fill out a form for your blog. [InitialPage](assets\indexPageSS.jpeg) This form is saved in an array in localStorage when you press submit. Once you press submit and the post is saved you are transferred to the blog page. [BlogPage](assets\blogPageSS.jpeg).
+This website initially asks you to fill out a form for your blog. [InitialPage](assets/indexPageSS.jpeg) This form is saved in an array in localStorage when you press submit. Once you press submit and the post is saved you are transferred to the blog page. [BlogPage](assets\blogPageSS.jpeg).
 Here you can view or delete the blogs.
 
 ##Usage
